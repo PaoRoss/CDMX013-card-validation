@@ -1,0 +1,41 @@
+:root {
+    --blanco: #f6f6f6;
+    --negro: #130f27;
+    --oscuro: #13542D;
+    --claro: #c3cf0a;
+    --primario: #e7eee8;
+
+    --fuenteHeading: 'Plus Jakarta Sans', sans-serif;
+}
+html{
+    background-color: var(--primario);
+}
+header {
+    background-color: var(--primario);
+    text-align: center;
+    font-size: 3rem;
+    color: var(--oscuro);
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+}
+
+form {
+    background-color: var(--blanco);
+    text-align: center;
+    font-family: var(--fuenteHeading);
+    font-size: 1.5rem;
+    color: var(--oscuro);
+}
+button {
+    background-color: var(--oscuro);
+    border: none;
+    color: var(--blanco);
+    border-radius: 6px;
+    font-family: var(--fuenteHeading);
+    font-size: 1.3rem;
+    text-decoration: none;
+    cursor: pointer;
+    width: 8rem;
+    padding: 6px;
+}
+

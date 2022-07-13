@@ -3,11 +3,40 @@
   <head>
     <meta charset="utf-8">
     <title>Tarjeta de crédito válida</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
+    
   </head>
   <body>
-    <header></header>
-    <main></main>
+    <header>Información de pago</header><br><br>
+
+    <main>
+      <form>
+        <fieldset>
+        
+        <label id="nCard" for="tarjeta">N° de tarjeta</label><br>
+        <input type="text" required minlength="16" maxlength="16" id="card" name="only_numbers" pattern="^[3][0-9]+" placeholder="N° de tarjeta">
+        <br><br>
+
+        <label for="exp">Fecha de expiración</label><br>
+        <input type="text" id="month" name="month-vigencia" placeholder="Mes">
+        <span>/</span>
+        <input type="text" id="year" name="year-vigencia" placeholder="Año"><br><br>
+        <label for="cvv">CVV</label>
+        <input type="number" id="codigo" name="codigo_usuario" placeholder="CVV">
+        <br><br>
+        <label for="name" >Nombre</label>
+        <input type="text" id="name" name="user_name" placeholder="Nombre">
+        <br><br>
+        
+        <button id="boton" onclick="validator()" type="button" name="validar_boton">Pagar</button>
+        <br><br>
+      
+      </fieldset>
+      </form>
+    </main>
     <footer></footer>
     <script src="index.js" type="module"></script>
   </body>
