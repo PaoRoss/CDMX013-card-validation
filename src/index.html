@@ -10,28 +10,39 @@
     
   </head>
   <body>
-    <header>Información de pago</header><br><br>
+    <header>
+      <h1>GreenSpot</h1>
+
+      <div class="liston-principal">
+        <nav class="nav-principipal">
+          <a href="#" class="nav-enlace">Dirección de envío</a>
+          <a href="#" class="nav-enlace">Carrito</a>
+          <a href="#" class="nav-enlace">Metodo de Pago</a>
+        </nav>
+      </div>
+    </header>
+    <br><br>
 
     <main>
-      <form>
+      <form class="formulario">
         <fieldset>
-        
-        <label id="nCard" for="tarjeta">N° de tarjeta</label><br>
-        <input type="text" required minlength="16" maxlength="16" id="card" name="only_numbers" pattern="^[3][0-9]+" placeholder="N° de tarjeta">
+        <legend>Metodo de Pago</legend>
+        <label id="nCard" for="number">N° de tarjeta</label><br>
+        <input type="text" required="" minlength="16" maxlength="16" id="cardNumber" name="cardNumber" pattern="[3][0-9]+" placeholder="N° de tarjeta">
         <br><br>
 
         <label for="exp">Fecha de expiración</label><br>
-        <input type="text" id="month" name="month-vigencia" placeholder="Mes">
+        <input type="text" minlength="2" maxlength="2" id="month" name="month" pattern="[0-9]+" placeholder="Mes">
         <span>/</span>
-        <input type="text" id="year" name="year-vigencia" placeholder="Año"><br><br>
-        <label for="cvv">CVV</label>
-        <input type="number" id="codigo" name="codigo_usuario" placeholder="CVV">
+        <input type="text" minlength="2" maxlength="2" id="year" name="year" pattern="[0-9]+" placeholder="Año"><br><br>
+        <label for="cvv">CVV</label><br>
+        <input type="text" minlength="3" maxlength="3" id="codigo" name="codigo" pattern="[0-9]+" placeholder="CVV">
         <br><br>
-        <label for="name" >Nombre</label>
-        <input type="text" id="name" name="user_name" placeholder="Nombre">
+        <label for="name" >Nombre</label><br>
+        <input type="text" id="userName" name="user_name" placeholder="Nombre">
         <br><br>
         
-        <button id="boton" onclick="validator()" type="button" name="validar_boton">Pagar</button>
+        <button id="boton" name="boton">Confirmar</button>
         <br><br>
       
       </fieldset>

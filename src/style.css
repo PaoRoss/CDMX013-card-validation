@@ -6,25 +6,68 @@
     --primario: #e7eee8;
 
     --fuenteHeading: 'Plus Jakarta Sans', sans-serif;
+    
 }
 html{
+    font-size: 62.5%;
+    box-sizing: border-box; /* Hack para box model */
+    scroll-snap-type: y mandatory;
     background-color: var(--primario);
+
 }
-header {
+*, *:before, *:after {
+    box-sizing: inherit;
+
+}
+
+.nav-enlace {
+    padding: 1rem 2rem;
+    display: inline-block;
+    background:var(--claro);
+    color: var(--negro);
+    font-size: 2rem;
+    text-decoration: none;
+
+}
+.nav-enlace:hover {
+    background: var(--primario);
+
+}
+nav {
+    background: var(--oscuro);
+    padding: 1rem 2rem;
+    display:flex;
+    justify-content:space-around;
+
+}
+h1 {
     background-color: var(--primario);
     text-align: center;
-    font-size: 3rem;
+    font-size: 3.8rem;
     color: var(--oscuro);
     font-family: var(--fuenteHeading);
     font-weight: bold;
+
 }
 
-form {
+.formulario {
     background-color: var(--blanco);
+    width: 80rem;
+    margin: 0 auto;
+    padding: 3rem;
+    border-radius: 2rem;
+    font-size: 2rem;
+
+}
+.formulario fieldset {
+    border: none;
+
+}
+legend {
+    font-size: 3rem;
     text-align: center;
-    font-family: var(--fuenteHeading);
-    font-size: 1.5rem;
     color: var(--oscuro);
+
 }
 button {
     background-color: var(--oscuro);
@@ -37,5 +80,5 @@ button {
     cursor: pointer;
     width: 8rem;
     padding: 6px;
-}
 
+}
