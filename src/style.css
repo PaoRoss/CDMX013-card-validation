@@ -1,18 +1,19 @@
 :root {
-    --blanco: #f6f6f6;
-    --negro: #130f27;
-    --oscuro: #13542D;
-    --claro: #c3cf0a;
-    --primario: #e7eee8;
+   --primario: #c4e0e3;
+   --secundario: #97b9b5;
+   --tercero: #b3d1a2;
+   --claro: #f4f2dd;
+   --popcolor: #2f737a;
 
-    --fuenteHeading: 'Plus Jakarta Sans', sans-serif;
+    --fuenteHeading: 'Cormorant SC', serif;;
+    --fuenteBody: 'Lato', sans-serif;
     
 }
 html{
     font-size: 62.5%;
     box-sizing: border-box; /* Hack para box model */
-    scroll-snap-type: y mandatory;
-    background-color: var(--primario);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 78%, rgba(212,230,232,1) 100%);
+    background-repeat: no-repeat;
 
 }
 *, *:before, *:after {
@@ -20,65 +21,103 @@ html{
 
 }
 
+h1 {
+    text-align: center;
+    font-size: 3.8rem;
+    font-family: var(--fuenteHeading);
+    font-weight:bold;
+    padding: 1rem 1rem;
+
+}
+.icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icono1 {
+    display: flex;
+    flex-direction:row;
+    align-items: center;
+}
+
 .nav-enlace {
-    padding: 1rem 2rem;
+    padding: 9px 3px;
     display: inline-block;
-    background:var(--claro);
+    color:var(--negro);
+    font-size: 2rem;
+    text-decoration: none;
+    border-radius: 7px;
+
+}
+.nav-enlace1 {
+    padding: 9px 3px;
+    display: inline-block;
     color: var(--negro);
     font-size: 2rem;
     text-decoration: none;
+    border-radius: 7px;
+    background-color:whitesmoke;
 
 }
 .nav-enlace:hover {
-    background: var(--primario);
+    background: var(--secundario);
 
 }
+
 nav {
-    background: var(--oscuro);
-    padding: 1rem 2rem;
+    background:#a9d0d4;
+    padding: 4px;
     display:flex;
     justify-content:space-around;
 
-}
-h1 {
-    background-color: var(--primario);
-    text-align: center;
-    font-size: 3.8rem;
-    color: var(--oscuro);
-    font-family: var(--fuenteHeading);
-    font-weight: bold;
 
 }
+
 
 .formulario {
-    background-color: var(--blanco);
-    width: 80rem;
-    margin: 0 auto;
+    background-color:whitesmoke;
+    width: 60rem;
+    margin: 2rem auto;
     padding: 3rem;
     border-radius: 2rem;
-    font-size: 2rem;
+    font-size: 2.1rem;
+    color: var(--popcolor);
+    font-family: var(--fuenteBody);
+
+
+    display: flex;
+    flex-direction: column;
 
 }
 .formulario fieldset {
     border: none;
+    padding: none;
 
 }
 legend {
     font-size: 3rem;
     text-align: center;
     color: var(--oscuro);
+    font-weight:bold;
 
 }
 button {
-    background-color: var(--oscuro);
+    background-color: var(--tercero);
     border: none;
-    color: var(--blanco);
+    color: black;
     border-radius: 6px;
-    font-family: var(--fuenteHeading);
-    font-size: 1.3rem;
+    font-family: var(--fuenteBody);
+    font-size: 1.8rem;
     text-decoration: none;
     cursor: pointer;
-    width: 8rem;
-    padding: 6px;
+    width: 12rem;
+    padding: 5px;
+    font-weight: bold;
 
 }
+.boton {
+    text-align: center;
+}
+
+
+
