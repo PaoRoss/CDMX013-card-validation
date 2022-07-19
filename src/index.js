@@ -1,14 +1,11 @@
 import validator from './validator.js';
 
-const numero = document.querySelector('input');
+document.getElementById('confirmar').addEventListener('click', function(e){
+    e.preventDefault();
 
-numero.addEventListener('input', () => {
-    numero.setCustomValidity('');
-    numero.checkValidity();
-    console.log(numero.checkValidity());
+    let cardNum = document.getElementById('cardNumber');
+    validator.isValid(cardNum);
+
+
 });
-
-numero.addEventListener('invalid', ( )=> {
-    numero.setCustomValidity('Completa el campo N° de tarjeta*.');
-})
-
+console.log(validator);

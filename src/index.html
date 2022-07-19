@@ -30,44 +30,58 @@
         </nav>
       </div>
     </header>
-    <br>
 
     <main>
-      <div class="principal">
+      <div class="contenedor">
       <form class="formulario">
-        <fieldset>
 
-          <legend>Metodo de Pago</legend>
+        <legend>Metodo de Pago</legend>
+
+          <div class="contenedor-input">
           <div class="icono1">
             <label id="nCard" for="number">N° de tarjeta</label><br>
-            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-credit-card" width="64" height="64" viewBox="0 0 24 24" stroke-width="1" stroke="#455453" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-credit-card" width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#4a4a4a" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
               <rect x="3" y="5" width="18" height="14" rx="3" />
               <line x1="3" y1="10" x2="21" y2="10" />
               <line x1="7" y1="15" x2="7.01" y2="15" />
               <line x1="11" y1="15" x2="13" y2="15" />
-            </svg>
+            </svg></div>
+            <input type="text" required minlength="16" maxlength="16" id="cardNumber" name="cardNumber" pattern="[0-9]+" placeholder="N° de tarjeta*">
+          <div class="error"></div>        
           </div>
-          
-        <input type="text" required minlength="16" maxlength="16" id="cardNumber" name="cardNumber" pattern="[0-9]+" placeholder="N° de tarjeta*"><br>
-      
-        <!--<label for="exp">Fecha de expiración</label><br>
-        <input type="text" minlength="2" maxlength="2" id="month" name="month" pattern="[0-9]+" placeholder="Mes">
-        <span>/</span>
-        <input type="text" minlength="2" maxlength="2" id="year" name="year" pattern="[0-9]+" placeholder="Año"><br>
-        <label for="cvv">CVV</label><br>
-        <input type="text" minlength="3" maxlength="3" id="codigo" name="codigo" pattern="[0-9]+" placeholder="CVV"><br>
+        
+          <!--<div class="contenedor-input1">
+          <pre><label>Mes vencimiento</label>                <label>Año vencimiento</label></pre>
+        
+            <input type="text" required minlength="2" maxlength="2" id="mes" name="mes" pattern="[0-9]+" placeholder="mm">
+              /
+            <input type="text" required minlength="2" maxlength="2" id="año" name="año" pattern="[0-9]+" placeholder="aa">
+          <div class="error"></div>
+          </div>
 
-        <label for="name" >Nombre</label><br>
-        <input type="text" id="userName" name="user_name" placeholder="Nombre"><br>-->
-        <div class="boton">
-        <button id="boton" type="submit" name="boton">Confirmar</button>
+          <div class="contenedor-input">
+          <label>CVV</label>
+        
+            <input type="password" required minlength="3" maxlength="3" id="password" name="password" pattern="[0-9]+" placeholder="CVV">
+          <div class="error"></div>  
+          </div>
 
-      </div>
+          <div class="contenedor-input">
+          <label>Titular</label>
+        
+            <input type="text" required minlength="16" maxlength="16" id="titular" name="titular" pattern="[aA-zZ]+" placeholder="Titular">
+          <div class="error"></div>  
+          </div>-->
+
+          <div class="boton">
+            <button type="submit" id="confirmar">Confirmar</button>
+          </div>
       
-      </fieldset>
+
       </form>
     </div>
+   
     </main>
     <footer></footer>
     <script src="index.js" type="module"></script>

@@ -9,25 +9,9 @@
     --fuenteBody: 'Lato', sans-serif;
     
 }
-html{
-    font-size: 62.5%;
-    box-sizing: border-box; /* Hack para box model */
-    background: linear-gradient(180deg, rgba(255,255,255,1) 78%, rgba(212,230,232,1) 100%);
-    background-repeat: no-repeat;
-
-}
-*, *:before, *:after {
-    box-sizing: inherit;
-
-}
-
 h1 {
-    text-align: center;
-    font-size: 3.8rem;
     font-family: var(--fuenteHeading);
-    font-weight:bold;
-    padding: 1rem 1rem;
-
+    font-size: 3rem;
 }
 .icono {
     display: flex;
@@ -44,7 +28,7 @@ h1 {
     padding: 9px 3px;
     display: inline-block;
     color:var(--negro);
-    font-size: 2rem;
+    font-size: 20px;
     text-decoration: none;
     border-radius: 7px;
 
@@ -53,7 +37,7 @@ h1 {
     padding: 9px 3px;
     display: inline-block;
     color: var(--negro);
-    font-size: 2rem;
+    font-size: 20px;
     text-decoration: none;
     border-radius: 7px;
     background-color:whitesmoke;
@@ -72,52 +56,66 @@ nav {
 
 
 }
-
-
-.formulario {
-    background-color:whitesmoke;
-    width: 60rem;
-    margin: 2rem auto;
-    padding: 3rem;
-    border-radius: 2rem;
-    font-size: 2.1rem;
-    color: var(--popcolor);
-    font-family: var(--fuenteBody);
-
-
-    display: flex;
-    flex-direction: column;
-
+body {
+    background: linear-gradient(180deg, rgba(255,255,255,1) 78%, rgba(212,230,232,1) 100%);
+    background-repeat: no-repeat;
 }
-.formulario fieldset {
-    border: none;
-    padding: none;
+.formulario {
+    width: 600px;
+    margin: 20vh auto 0 auto;
+    padding: 20px;
+    background-color: whitesmoke;
+    font-family: var(--fuenteBody);
+    font-size: 20px;
+    border-radius: 7px;
+    color: #4a4a4a;
 
 }
 legend {
-    font-size: 3rem;
+    color: var(--popcolor);
     text-align: center;
-    color: var(--oscuro);
-    font-weight:bold;
-
+    font-size: 2rem;
+    padding-bottom: 15px;
+}
+pre {
+    margin: 0;
+    font-family: var(--fuenteBody);
+    font-size: 20px;
 }
 button {
+    padding: 10px;
+    margin-top: 1rem;
+    width: 100%;
+    color: black;
     background-color: var(--tercero);
     border: none;
-    color: black;
     border-radius: 6px;
-    font-family: var(--fuenteBody);
-    font-size: 1.8rem;
-    text-decoration: none;
-    cursor: pointer;
-    width: 12rem;
-    padding: 5px;
-    font-weight: bold;
-
+    font-size: 1rem;
 }
 .boton {
     text-align: center;
 }
-
-
-
+.contenedor-input {
+    display: flex;
+    flex-direction: column;
+}
+.contenedor-input input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display: block;
+    font-size: 14px;
+    padding: 10px;
+}
+.contenedor-input1 input {
+    border: 2px solid #f0f0f0;
+    border-radius: 4px;
+    display:inline-block;
+    font-size: 14px;
+    padding: 10px;
+}
+.contenedor-input input:focus {
+    outline: 0;
+}
+.contenedor-input1 input:focus {
+    outline: 0;
+}
