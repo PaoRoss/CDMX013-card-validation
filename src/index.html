@@ -33,13 +33,13 @@
 
     <main>
       <div class="contenedor">
-      <form class="formulario">
+      <form class="formulario sombra">
 
         <legend>Metodo de Pago</legend>
 
           <div class="contenedor-input">
           <div class="icono1">
-            <label id="nCard" for="number">N° de tarjeta</label><br>
+            <label id="nCard" for="number">N° de tarjeta*</label><br>
             <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-credit-card" width="48" height="48" viewBox="0 0 24 24" stroke-width="1.5" stroke="#4a4a4a" fill="none" stroke-linecap="round" stroke-linejoin="round">
               <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
               <rect x="3" y="5" width="18" height="14" rx="3" />
@@ -47,35 +47,35 @@
               <line x1="7" y1="15" x2="7.01" y2="15" />
               <line x1="11" y1="15" x2="13" y2="15" />
             </svg></div>
-            <input type="text" required minlength="16" maxlength="16" id="cardNumber" name="cardNumber" pattern="[0-9]+" placeholder="N° de tarjeta*">
-          <div class="error"></div>        
+            <input type="text" maxlength="16" minlength="16" required id="cardNumber" name="cardNumber" placeholder="Número de tarjeta(16 dígitos)">
+            <p id="error"></p>        
           </div>
         
-          <!--<div class="contenedor-input1">
+          <div class="contenedor-input1">
           <pre><label>Mes vencimiento</label>                <label>Año vencimiento</label></pre>
         
             <input type="text" required minlength="2" maxlength="2" id="mes" name="mes" pattern="[0-9]+" placeholder="mm">
               /
             <input type="text" required minlength="2" maxlength="2" id="año" name="año" pattern="[0-9]+" placeholder="aa">
-          <div class="error"></div>
+            <p id="error"></p> 
           </div>
 
           <div class="contenedor-input">
           <label>CVV</label>
         
-            <input type="password" required minlength="3" maxlength="3" id="password" name="password" pattern="[0-9]+" placeholder="CVV">
-          <div class="error"></div>  
+            <input type="password" minlength="3" maxlength="3" id="password" name="password" pattern="[0-9]+" placeholder="CVV">
+            <p id="error"></p>   
           </div>
 
           <div class="contenedor-input">
           <label>Titular</label>
         
             <input type="text" required minlength="16" maxlength="16" id="titular" name="titular" pattern="[aA-zZ]+" placeholder="Titular">
-          <div class="error"></div>  
-          </div>-->
+            <p id="error"></p>   
+          </div>
 
           <div class="boton">
-            <button type="submit" id="confirmar">Confirmar</button>
+            <button id="confirmar">Confirmar</button>
           </div>
       
 
@@ -83,7 +83,7 @@
     </div>
    
     </main>
-    <footer></footer>
+    <footer>Paola Rossano. Laboratoria MEX013</footer>
     <script src="index.js" type="module"></script>
   </body>
 </html>
