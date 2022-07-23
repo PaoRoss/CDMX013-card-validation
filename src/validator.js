@@ -1,13 +1,8 @@
 const validator = {
-    isValid: function (){
-        console.log("si se puede chicas")
-    },
-   maskify:function(){
+    isValid: function invertirCadena(cardNumber) {
+        return cardNumber.split("").reverse().join("");
+        }
 
-   },
-   ejemplo:function(nombre){
-    return "Hola "+nombre+" saludos jaja"
-   },
-   nombre:"malefica"
-  };
+    };
+
   export default validator;
