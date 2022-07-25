@@ -56,11 +56,13 @@
               <line x1="11" y1="15" x2="13" y2="15" />
             </svg>
           </div>
+
           <input type="text" minlength="13" maxlength="16" id="cardNumber" name="cardNumber" placeholder="Número de tarjeta">
+          <p id="error"></p>
         </div>
 
         <div class="contenedor-input1">
-          <pre><label>Mes vencimiento</label>                <label>Año vencimiento</label></pre>
+          <pre class="vencimiento"><label>Mes vencimiento</label>                <label>Año vencimiento</label></pre>
 
           <input type="text" required minlength="2" maxlength="2" id="mes" name="mes" pattern="[0-9]+" placeholder="mm">
           /
@@ -79,7 +81,7 @@
 
           <input type="text" required id="titular" name="titular" pattern="[aA-zZ]+"
             placeholder="Titular">
-          <p id="error"></p>
+
         </div>
 
         <div class="boton">
