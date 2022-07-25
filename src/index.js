@@ -1,26 +1,24 @@
 import validator from './validator.js';
 
-document.getElementById("confirmar").addEventListener("click", () => { 
-  validar(document.getElementById("cardNumber").value);
-});
-validator.isValid;
-function validar(numero) {
-  if (numero === "") {
-    document.getElementById("error").innerHTML = "Completa este campo";
-  } else {
-    let pattern = /^\\d{16}$/; // expresiones regulares
-    if (pattern.test(numero)) {
-      document.getElementById("error").innerHTML = "Tarjeta valida";
-    } else {
-      document.getElementById("error").innerHTML = "N° de tarjeta invalido";
-    }
-    limpiar();
-  }
+const btnConfirmar = document.getElementById('confirmar');
+const numberAccount = document.getElementById("cardNumber");
 
+btnConfirmar.addEventListener('click', validarCuenta);
+
+function validarCuenta() {
+  if(numberAccount.value.length <= 12){
+    document.getElementById('error').innerHTML = '¡Tarjeta Invalida, completa los campos!';
+  } else if (validator.isValid(numberAccount.value)){
+    document.getElementById('error').innerHTML = '¡Tu tarjeta es Valida!';
+  } else {
+    document.getElementById('error').innerHTML = '¡Intentalo de nuevo!';
+  }
+  limpiar();
 }
-function limpiar () {
-  setTimeout(()=>{
-    document.getElementById("error").innerHTML = "";
-  },1800);
+
+function limpiar(){
+  setTimeout( () => {
+    document.getElementById('error').innerHTML = '';
+  }, 2000);
 }
- 
+
