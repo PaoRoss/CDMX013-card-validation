@@ -40,7 +40,7 @@ const validator = {
             if (i < numberAccount.length - 4) { // usamos el condicional if...else para enmascarar los numeros excepto los ultimos 4
                 enmascarar = '#' + enmascarar; // Nota: en esta linea, el orden en que concatenamos no afecta el resultado
             } else {
-                enmascarar = enmascarar + numberAccount.charAt(i); // Nota: el orden en que concatenamos si afecta el resultado
+                enmascarar = enmascarar + numberAccount[i]; // Nota: el orden en que concatenamos si afecta el resultado. En lugar de usar charAt usamos corchetes
             }
         }
         return enmascarar;
