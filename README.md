@@ -27,8 +27,8 @@ Es importante para los usuarios contar con una web app que les permita confirmar
 ## 5. Feedback
 
 1. Por compañeras: 
-2. Por Coach: Al finalizar en primer Sprint, el Coach Daniel me animo a trabajar más en CSS para que mi proyecto fuera lo más fiel posible al prototipo final.
-Al finalizar el segundo Sprint, el Coach Carlos me compartió una extensión para Google, la cual me ayudaría a enfocarme a trabajar en JAVASCRIPT.
+2. Por Coach: Al finalizar en primer Sprint, el Coach Daniel me animó a trabajar más en CSS para que mi proyecto fuera lo más fiel posible al prototipo final.
+Al finalizar el segundo Sprint, el Coach Carlos me compartió una extensión para Google, la cual me ayudaría a enfocarme a trabajar más en JAVASCRIPT.
 
 ## 5. Prototipo final (Figma)
 
