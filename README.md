@@ -22,7 +22,7 @@ Es importante para los usuarios contar con una web app que les permita confirmar
 
 ## 4. Prototipo a papel
 
-[![proyecto-Credit-Card.png](https://i.postimg.cc/hvvvM3F2/proyecto-Credit-Card.png)](https://postimg.cc/H8GTkzkM)
+[![IMG-20220725-221611.jpg](https://i.postimg.cc/W46gDK6K/IMG-20220725-221611.jpg)](https://postimg.cc/4KymqW0b)
 
 ## 5. Feedback
 
