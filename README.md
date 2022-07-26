@@ -18,7 +18,7 @@ El proyecto Credit Card Validation se enfoca en la pantalla de "Método de pago"
 
 ## 3. Solución a las necesidades de los usuarios
 
-Es importante para los usuarios contar con una web app que les permita confirmar que las tarjetas usadas para realizar compras por medio de la internet son válidas con la finalidad de agilizar las compras y evitar problemas en el futuro. 
+Es importante brindar al usuario un producto que le permita confirmar que las tarjetas utilizadas para realizar compras por medio de la web app son válidas, esto con la finalidad de agilizar el proceso de compra y evitar problemas de fraude en el futuro. 
 
 ## 4. Prototipo a papel
 
