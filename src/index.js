@@ -1,34 +1,34 @@
 import validator from './validator.js';
 
 // Declarando variables
-const btnConfirmar = document.getElementById('confirmar');
+
+const btn = document.getElementById('confirmar');
 const numberAccount = document.getElementById("cardNumber");
+let regex = new RegExp('^\\d+$');
 
-// Agregando eventos
+// Manipulación del DOM.
 
-btnConfirmar.addEventListener('click', validarCuenta);
+btn.addEventListener('click', validarAccount);
 
-// Creando función para manipular el DOM
-
-function validarCuenta() {
-  if(numberAccount.value.length <= 12){
-    numberAccount.value = validator.maskify(numberAccount.value);
-    document.getElementById('error').innerHTML = '¡Tarjeta Invalida, completa los campos!';
+function validarAccount() {
+  if(!regex.test(numberAccount)){
+    document.getElementById('message1').innerHTML = '¡Tarjeta Invalida. Intentalo de nuevo!';
   } else if (validator.isValid(numberAccount.value)){
     numberAccount.value = validator.maskify(numberAccount.value);
-    document.getElementById('error').innerHTML = '¡Tu tarjeta es Valida. Puedes continuar!';
+    document.getElementById('message').innerHTML = '¡Tu tarjeta es Valida. Puedes continuar!';
   } else {
-    document.getElementById('error').innerHTML = '¡Intentalo de nuevo!';
+    document.getElementById('message1').innerHTML = '¡Intentalo de nuevo!';
   }
-  limpiar();
+  cleanP();
 }
 
 // Función para limpiar el mensaje
 
-function limpiar(){ 
+function cleanP(){ 
   setTimeout( () => {
-    document.getElementById('error').innerHTML = '';
-  }, 2000);
+    document.getElementById('message').innerHTML = '';
+    document.getElementById('message1').innerHTML = '';
+  }, 3000);
 
 }
 

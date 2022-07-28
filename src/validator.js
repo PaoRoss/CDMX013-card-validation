@@ -1,50 +1,56 @@
 const validator = {
     isValid: function (numberAccount) {
+        /* Aplicamos los metodos split para convertir el string a un array.
+         Invertimos el array con reverse.*/
 
-        let reverseNum = numberAccount.split('').reverse().join(''); // en esta variable tenemos card number 
-        let newNum = [];
+        let reverseNum = numberAccount.split('').reverse().join('');  
+        let newArray = [];
 
         /*Creamos un bucle for para recorrer el array. 
         Desde que i es igual a cero, hasta que i sea menor a la longitud del numeroIngresado. 
-        Se va a ir incrementando de uno en uno */
+        Va a ir incrementando de uno en uno */
 
         for (let i = 0; i < numberAccount.lenght; i++) {
-            newNum.push(parseInt(reverseNum[i])); /* los numeros invertidos los añadimos al array newNum*/
+
+            /* Se usa metodo push para añadir los elementos a newArray.
+            Se usó parseInt para convertir el string a number*/
+            newArray.push(parseInt(reverseNum[i])); 
         }
 
-        /* Usamos map para iterar en el arreglo y le decimos que si el indice es modulo de dos entonces numtiplique el numero por 2 */
-        newNum = newNum.map((numero, indice) => indice % 2 === 1 ? numero * 2 : numero);
+        /* Usamos map para iterar en el arreglo. Multiplicamos *2 los numeros en posición par, si no cumplen esa condición, mantienen su valor */
+        newArray = newArray.map((num, indice) => indice % 2 === 1 ? num * 2 : num);
 
-        /* Usamos map para iterar en el arreglo y le decimos que si numero es mayor a 9 entonces le reste 9 al numero*/
-        newNum = newNum.map(numero => numero > 9 ? numero - 9 : numero);
+        /*Iteramos mediante el metodo map y creamos la condicion, si el numero es mayor a 9, 
+        retorta true y le resta 9, si retorna false mantiene su valor */
+        newArray = newArray.map(num => num > 9 ? num - 9 : num);
 
-        /* Creamos una variable para guardar la suma y samos el metodo reduce para sumar el numero anterior con el actual*/
-        let suma = newNum.reduce((anterior, actual) =>
-            anterior += actual, 0);
+        /* Usamos reduce en newArray para sumar el numero anterior al actual */
+        let sum = newArray.reduce((prevNumber, actNumber) =>
+            prevNumber += actNumber, 0);
 
-        /* Creamos una variable para guardar el resultado de obtener el modulo 10 de la suma anterior. 
-        Si el resultado es igual a 0 es verdadero, de lo contrario es falso*/
-        let resultado = suma % 10 === 0;
-        if (resultado) {
+        /* Asignamos a result lo que obtenemos del operador modulo.
+        Usamos condicional if else, si retorna true el numero es valido, si no cumple esta condicion retorna false */
+        let result = sum % 10 === 0;
+        if (result) {
             true;
         } else {
             false;
         }
-        return resultado;
+        return result;
     },
     maskify: function(numberAccount) {
 
-        let  enmascarar= ''; // Variable vacia para almacenar el string enmascarado
+        let  hide= ''; // Variable vacia para almacenar el string enmascarado
 
         for (let i = 0; i < numberAccount.length; i++) { // se crea bucle for para recorrer el array
             if (i < numberAccount.length - 4) { // usamos el condicional if...else para enmascarar los numeros excepto los ultimos 4
-                enmascarar = '#' + enmascarar; // Nota: en esta linea, el orden en que concatenamos no afecta el resultado
+                hide = hide + '#'; 
             } else {
-                enmascarar = enmascarar + numberAccount[i]; // Nota: el orden en que concatenamos si afecta el resultado. En lugar de usar charAt usamos corchetes
+                hide = hide + numberAccount[i]; 
             }
         }
-        return enmascarar;
-    }
+        return hide;
+    }, 
 
 };
 
