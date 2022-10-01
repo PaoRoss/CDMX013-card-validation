@@ -1,5 +1,6 @@
 const validator = {
     isValid: function (numberAccount) {
+        
         /* Aplicamos los metodos split para convertir el string a un array.
          Invertimos el array con reverse.*/
 
@@ -7,10 +8,10 @@ const validator = {
         let newArray = [];
 
         /*Creamos un bucle for para recorrer el array. 
-        Desde que i es igual a cero, hasta que i sea menor a la longitud del numeroIngresado. 
+        Desde que i es igual a cero, hasta que i sea menor a la longitud de numberAccount. 
         Va a ir incrementando de uno en uno */
 
-        for (let i = 0; i < numberAccount.lenght; i++) {
+        for (let i = 0; i < numberAccount.length; i++) {
 
             /* Se usa metodo push para añadir los elementos a newArray.
             Se usó parseInt para convertir el string a number*/
@@ -50,7 +51,7 @@ const validator = {
             }
         }
         return hide;
-    }, 
+    }
 
 };
 

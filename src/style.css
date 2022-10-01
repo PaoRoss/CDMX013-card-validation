@@ -131,14 +131,14 @@
  .contenedor-input1 input:focus {
      outline: 0;
  }
- #error {
+ #message {
     color: #247962;
     margin: 0;
     font-size: 18px;
     font-weight: bold;
     /*text-decoration:underline;*/
  }
- #error2 {
+ #message1 {
     color: #983030;
     margin: 0;
     font-size: 18px;
